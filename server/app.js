@@ -14,12 +14,19 @@ var routes = require('./routes/index.js');
 var app = express();
 
 // *** mongoose *** ///
-mongoose.connect('mongodb://localhost/node-testing', function(err, res) {
-  if(err) {
-    console.log('Error connecting to the database. ' + err);
-  } else {
-    console.log('Connected to Database!');
-  }
+// var promise =  mongoose.connect('mongodb://localhost/node-testing', function(err, res) {
+//   if(err) {
+//     console.log('Error connecting to the database. ' + err);
+//   } else {
+//     console.log('Connected to Database!');
+//   }
+// });
+
+mongoose.Promise = global.Promise;
+var promise =  mongoose.connect('mongodb://localhost/node-testing', {useMongoClient: true});
+
+promise.then(function(db){
+  console.log('Connected to Database!');
 });
 
 // *** config middleware *** //
