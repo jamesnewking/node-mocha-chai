@@ -13,7 +13,9 @@ var routes = require('./routes/index.js');
 // *** express instance *** //
 var app = express();
 
-// *** mongoose *** ///
+// *** config file *** //
+var config = require('./_config');
+
 // var promise =  mongoose.connect('mongodb://localhost/node-testing', function(err, res) {
 //   if(err) {
 //     console.log('Error connecting to the database. ' + err);
@@ -27,7 +29,6 @@ var promise =  mongoose.connect('mongodb://localhost/node-testing', {useMongoCli
 
 promise.then(function(db){
   console.log('Connected to Database!');
-});
 
 // *** config middleware *** //
 app.use(logger('dev'));
