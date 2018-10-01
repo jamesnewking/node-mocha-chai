@@ -1,4 +1,4 @@
-[blog post](http://mherman.org/blog/2015/09/10/testing-node-js-with-mocha-and-chai/#.VfJlgVNViko)
+
 #Mocha and Chai example with MondoDb
 ##from: 
 ###### https://mherman.org/blog/testing-node-js-with-mocha-and-chai/
@@ -78,6 +78,7 @@ GET http://localhost:1337/blobs will show
 * at a directory above test, run$ mocha 
 
 
+
 > to run sample tests on  Mocha/Chai with Selenium
 
 > Simple google title page test:
@@ -87,3 +88,4 @@ GET http://localhost:1337/blobs will show
 >> just make sure in package.json, set the --timeout to 10000; 
 
 >> because default mocha test is 2 seconds and that's too short for selenium tests
+
