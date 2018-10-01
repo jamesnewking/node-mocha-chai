@@ -77,3 +77,15 @@ GET http://localhost:1337/blobs will show
 * before mocha tests, make sure the tests have the dependencies installed like chai, chai-http
 * at a directory above test, run$ mocha 
 
+
+
+> to run sample tests on  Mocha/Chai with Selenium
+
+> Simple google title page test:
+
+> npm run test
+
+>> just make sure in package.json, set the --timeout to 10000; 
+
+>> because default mocha test is 2 seconds and that's too short for selenium tests
+
